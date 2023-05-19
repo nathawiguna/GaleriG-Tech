@@ -1,0 +1,124 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.root {
+    width: 100vw;
+    padding: 15px;
+    margin-top: -10px;
+    padding-bottom: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+.root h1 {
+    background-color: initial;
+}
+
+.root-latdas {
+    background-image: url(assets/latdas-section/latdas-backgound.jpg);
+}
+
+.root-ephotech {
+    background-image: url(assets/ephotech-section/ephotech-background.png);
+}
+
+.root-party {
+    background-image: url(assets/party-section/party-background-night.jpg);
+}
+
+.ground {
+    background-color: rgba(0, 0, 0, .8);
+    margin-top: 20px;
+    color: white;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+.image {
+    margin-inline: auto;
+}
+
+.carousel-caption {
+    padding: 10px;
+    border-radius: 20px;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.801);
+    margin-inline: auto;
+}
+
+.carousel-item {
+    justify-content: center;
+}
+
+.carousel-slide {
+    margin-inline: auto;
+    justify-content: center;
+}
+
+.carousel-cont {
+    margin-inline: auto;
+}
+
+.carousel-caption {
+    font-size: 2px;
+}
+
+.carousel-control-prev {
+    margin-left: 10%;
+    height: fit-content;
+    width: fit-content;
+    margin-block: auto;
+}
+
+.carousel-control-next {
+    margin-right: 10%;
+    height: fit-content;
+    width: fit-content;
+    margin-block: auto;
+}
+
+@media only screen and (max-width: 532px) {
+    .carousel-item {
+        justify-content: center;
+    }
+    
+    .carousel-slide {
+        margin-inline: auto;
+        justify-content: center;
+    }
+    
+    .carousel-caption {
+        display: none;
+    }
+    
+    .carousel-cont {
+        margin-inline: auto;
+    }
+    
+    .carousel-control-prev {
+        margin-left: 10%;
+        height: fit-content;
+        width: fit-content;
+        margin-block: auto;
+
+    }
+    
+    .carousel-control-next {
+        margin-right: 10%;
+        height: fit-content;
+        width: fit-content;
+        margin-block: auto;
+
+    }
+  }

@@ -1,0 +1,94 @@
+.container-1 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+  
+.container-1::before {
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    left: 0px;
+    background-size: 1920px;
+    background-repeat: no-repeat;
+    background-position-x: -500px;
+    background-position-y: 50px;
+    position: absolute;
+    z-index: 0;
+    filter: brightness(60%);
+}
+
+.intro-morning-background::before{
+    background-image: url('/src/assets/intro/intro-background-morning.jpg');
+}
+  
+.intro-night-background::before {
+    background-image: url('/src/assets/intro/intro-background-night.jpg');
+}
+
+.intro {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+    padding: 20px;
+    background-color: #282c34;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 4px;
+}
+
+.carousel-slide {
+    margin-inline: auto;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-indicators {
+    opacity: 0;
+}
+
+.intro .carousel-control-prev {
+    margin-left: -15%;
+    height: fit-content;
+    width: fit-content;
+    padding: 7px;
+    margin-block: auto;
+    border-radius: 5px;
+}
+
+.intro .carousel-control-next {
+    margin-right: -15%;
+    height: fit-content;
+    width: fit-content;
+    padding: 7px;
+    margin-block: auto;
+    border-radius: 5px;
+}
+
+.intro-link {
+    text-decoration: none;
+    color: white;
+}
+
+.intro-link:hover {
+    color: white;
+}
+
+.menu-cont {
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-cont .intro-button:hover {
+    background-color: rgb(206, 2, 94);
+    transition: background-color 0.3s;
+    transition-timing-function: ease-in;
+}
+

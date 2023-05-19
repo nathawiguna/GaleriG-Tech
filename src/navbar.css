@@ -1,0 +1,25 @@
+body {
+  overflow-x:  hidden;
+}
+
+.navbar {
+  background: #282c34;
+  font-weight: 500;
+}
+
+Nav .nav-link {
+  color: white;
+  border: 0px;
+  border-style: solid;
+  border-bottom-color: #282c34;
+  border-bottom-width: 2px;
+  transition: border-bottom-width 0.5s, border-bottom-color 0.5s;
+  transition-timing-function: ease-in;
+}
+
+Nav .nav-link:hover {
+  border-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: green;
+  cursor: pointer;
+}
