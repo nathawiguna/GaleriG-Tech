@@ -2,9 +2,24 @@ body {
   overflow-x:  hidden;
 }
 
-.navbar {
+div .navbar-outer {
+  padding-block: 0px;
+}
+
+.navbar-cont {
   background: #282c34;
   font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  margin: 0px;
+  padding-inline: 5px;
+  height: 3.5em;
+  align-items: center;
+}
+
+.Nav {
+  max-width: fit-content;
 }
 
 Nav .nav-link {

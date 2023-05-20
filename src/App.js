@@ -4,6 +4,7 @@ import Intro from './components/Intro';
 import Latdas from './components/LATDAS';
 import Ephotech from './components/EPHOTECH'
 import Party from './components/party';
+import Footer from './components/footer'
 
 const currentTime = new Date();
 const currentHour = currentTime.getHours();
@@ -20,6 +21,7 @@ function App() {
       <Latdas/>
       <Ephotech/>
       <Party/>
+      <Footer/>
     </div>
   );
 }

@@ -105,20 +105,4 @@
     .carousel-cont {
         margin-inline: auto;
     }
-    
-    .carousel-control-prev {
-        margin-left: 10%;
-        height: fit-content;
-        width: fit-content;
-        margin-block: auto;
-
-    }
-    
-    .carousel-control-next {
-        margin-right: 10%;
-        height: fit-content;
-        width: fit-content;
-        margin-block: auto;
-
-    }
-  }
+}

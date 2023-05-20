@@ -11,15 +11,18 @@
     left: 0px;
     background-size: 1920px;
     background-repeat: no-repeat;
-    background-position-x: -500px;
-    background-position-y: 50px;
+    background-position-x: -20px;
+    background-position-y: -17px;
     position: absolute;
     z-index: 0;
     filter: brightness(60%);
 }
 
 .intro-morning-background::before{
-    background-image: url('/src/assets/intro/intro-background-morning.jpg');
+    background-image: url('/src/assets/intro/intro-background-morning-2.jpg');
+    filter: brightness(100%);
+    background-position-y: 50px;
+    background-position-x: -400px;
 }
   
 .intro-night-background::before {
@@ -55,21 +58,40 @@ h1 {
 }
 
 .intro .carousel-control-prev {
-    margin-left: -15%;
     height: fit-content;
     width: fit-content;
     padding: 7px;
     margin-block: auto;
     border-radius: 5px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: rgb(3, 169, 3);
+    opacity: 1;
+    margin-left: -10vw;
+    transition: background-color 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.intro .carousel-control-prev:hover {
+    background-color: rgb(252, 14, 204);
 }
 
 .intro .carousel-control-next {
-    margin-right: -15%;
     height: fit-content;
     width: fit-content;
     padding: 7px;
     margin-block: auto;
-    border-radius: 5px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: rgb(6, 177, 6);
+    opacity: 1;
+    margin-right: -10vw;
+    transition: background-color 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.intro .carousel-control-next:hover {
+    background-color: rgb(252, 14, 204);
 }
 
 .intro-link {

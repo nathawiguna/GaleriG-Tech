@@ -5,6 +5,21 @@ import ephotech from '../assets/intro/ephotech.jpg'
 import gTechParty from '../assets/intro/g-tech-party.jpg'
 import "../Intro.css"
 
+const IntroCard = (props) => {
+  
+  return (
+    <>
+      <Card style={{ width: '18rem', backgroundColor: '#282c34', height: "60vh"}}>
+        <Card.Img className="card-image" src={props.pictureLink} style={{height: "40vh"}}/>
+        <Card.Body>
+          <Card.Title style={{color: 'white'}}>{props.title}</Card.Title>
+          <Button variant="success" className='intro-button'><a href='#LATDAS' className='intro-link'>Lihat Foto</a></Button>
+        </Card.Body>
+      </Card>
+    </>
+  )
+}
+
 const Intro = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -19,7 +34,7 @@ const Intro = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
+  
   if (screenWidth >= 532) {
     return (
       <div className='border intro'>
@@ -32,29 +47,9 @@ const Intro = () => {
             </Container>
 
             <Container className='d-flex mt-4 menu-cont'>
-                <Card style={{ width: '18rem', backgroundColor: '#282c34', height: "60vh"}}>
-                    <Card.Img className="card-image" src={imgLatdas} style={{height: "40vh"}}/>
-                    <Card.Body>
-                      <Card.Title style={{color: 'white'}}>LATDAS</Card.Title>
-                      <Button variant="success" className='intro-button'><a href='#LATDAS' className='intro-link'>Lihat Foto</a></Button>
-                    </Card.Body>
-                </Card>
-
-                <Card style={{ width: '18rem', backgroundColor: '#282c34', height: "60vh"}}>
-                    <Card.Img className="card-image" variant="top" src={ephotech} style={{height: "40vh"}} />
-                    <Card.Body>
-                      <Card.Title style={{color: 'white'}}>EPHOTECH</Card.Title>
-                      <Button variant="success" className='intro-button'><a href='#EPHOTECH' className='intro-link'>Lihat Foto</a></Button>
-                    </Card.Body>
-                </Card>
-
-                <Card style={{ width: '18rem', backgroundColor: '#282c34', height: "60vh"}}>
-                  <Card.Img className="card-image" variant="top" src={gTechParty} style={{height: "40vh"}}/>
-                  <Card.Body>
-                      <Card.Title style={{color: 'white'}}>G-Tech Party</Card.Title>
-                      <Button variant="success" className='intro-button'><a href='#PARTY' className='intro-link'>Lihat Foto</a></Button>
-                  </Card.Body>
-                </Card>
+                <IntroCard pictureLink={imgLatdas} title="LATDAS"/>
+                <IntroCard pictureLink={ephotech} title="EPHOTECH"/>
+                <IntroCard pictureLink={gTechParty} title="G-Tech Party"/>
             </Container>
       </div>
     )
@@ -71,33 +66,15 @@ const Intro = () => {
 
             <Carousel w-20vh h-20vh className='carousel-slide'>
                     <Carousel.Item className='carousel-item'>
-                      <Card style={{ width: '18rem', backgroundColor: '#282c34', height: "60vh"}}>
-                        <Card.Img className="card-image" src={imgLatdas} style={{height: "40vh"}}/>
-                        <Card.Body>
-                          <Card.Title style={{color: 'white'}}>LATDAS</Card.Title>
-                          <Button variant="success" className='intro-button'><a href='#LATDAS' className='intro-link'>Lihat Foto</a></Button>
-                        </Card.Body>
-                      </Card>
+                      <IntroCard pictureLink={imgLatdas} title="LATDAS"/>
                     </Carousel.Item>
 
                     <Carousel.Item className='carousel-item'>
-                      <Card style={{ width: '18rem', backgroundColor: '#282c34', height: "60vh"}}>
-                        <Card.Img className="card-image" variant="top" src={ephotech} style={{height: "40vh"}} />
-                        <Card.Body>
-                          <Card.Title style={{color: 'white'}}>EPHOTECH</Card.Title>
-                          <Button variant="success" className='intro-button'><a href='#EPHOTECH' className='intro-link'>Lihat Foto</a></Button>
-                        </Card.Body>
-                      </Card>
+                      <IntroCard pictureLink={ephotech} title="EPHOTECH"/>
                     </Carousel.Item>
 
                     <Carousel.Item className='carousel-item'>
-                      <Card style={{ width: '18rem', backgroundColor: '#282c34', height: "60vh"}}>
-                        <Card.Img className="card-image" variant="top" src={gTechParty} style={{height: "40vh"}}/>
-                        <Card.Body>
-                          <Card.Title style={{color: 'white'}}>G-Tech Party</Card.Title>
-                          <Button variant="success" className='intro-button'><a href='#PARTY' className='intro-link'>Lihat Foto</a></Button>
-                        </Card.Body>
-                  </Card>
+                      <IntroCard pictureLink={gTechParty} title="G-Tech Party"/>
                     </Carousel.Item>
                 </Carousel>
       </div>
