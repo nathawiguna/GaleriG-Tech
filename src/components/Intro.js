@@ -13,7 +13,7 @@ const IntroCard = (props) => {
         <Card.Img className="card-image" src={props.pictureLink} style={{height: "40vh"}}/>
         <Card.Body>
           <Card.Title style={{color: 'white'}}>{props.title}</Card.Title>
-          <Button variant="success" className='intro-button'><a href='#LATDAS' className='intro-link'>Lihat Foto</a></Button>
+          <Button variant="success" className='intro-button'><a href={props.buttonLink} className='intro-link'>Lihat Foto</a></Button>
         </Card.Body>
       </Card>
     </>
@@ -47,9 +47,9 @@ const Intro = () => {
             </Container>
 
             <Container className='d-flex mt-4 menu-cont'>
-                <IntroCard pictureLink={imgLatdas} title="LATDAS"/>
-                <IntroCard pictureLink={ephotech} title="EPHOTECH"/>
-                <IntroCard pictureLink={gTechParty} title="G-Tech Party"/>
+                <IntroCard pictureLink={imgLatdas} title="LATDAS" buttonLink = '#LATDAS'/>
+                <IntroCard pictureLink={ephotech} title="EPHOTECH" buttonLink = '#EPHOTECH'/>
+                <IntroCard pictureLink={gTechParty} title="G-Tech Party" buttonLink = '#PARTY'/>
             </Container>
       </div>
     )
@@ -66,15 +66,15 @@ const Intro = () => {
 
             <Carousel w-20vh h-20vh className='carousel-slide'>
                     <Carousel.Item className='carousel-item'>
-                      <IntroCard pictureLink={imgLatdas} title="LATDAS"/>
+                      <IntroCard pictureLink={imgLatdas} title="LATDAS" buttonLink = '#LATDAS'/>
                     </Carousel.Item>
 
                     <Carousel.Item className='carousel-item'>
-                      <IntroCard pictureLink={ephotech} title="EPHOTECH"/>
+                      <IntroCard pictureLink={ephotech} title="EPHOTECH" buttonLink = '#EPHOTECH'/>
                     </Carousel.Item>
 
                     <Carousel.Item className='carousel-item'>
-                      <IntroCard pictureLink={gTechParty} title="G-Tech Party"/>
+                      <IntroCard pictureLink={gTechParty} title="G-Tech Party" buttonLink = '#PARTY'/>
                     </Carousel.Item>
                 </Carousel>
       </div>
