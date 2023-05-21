@@ -12,7 +12,7 @@ const SectionCarouselContent = (props) => {
             <img
                 className="image"
                 src={props.imageSource}
-                alt="Slide Image"
+                alt="Slide Content"
             />
             <Carousel.Caption className='carousel-caption'>
                 <h3>{props.caption}</h3>

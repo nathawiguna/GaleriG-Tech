@@ -6,13 +6,13 @@ import party3 from '../assets/party-section/party_3.jpg'
 import '../section.css'
 
 const SectionCarouselContent = (props) => {
-    
+
     return (
         <>
             <img
                 className="image"
                 src={props.imageSource}
-                alt="Slide Image"
+                alt="Slide Content"
             />
             <Carousel.Caption className='carousel-caption'>
                 <h3>{props.caption}</h3>
