@@ -5,6 +5,22 @@ import latdas2 from '../assets/latdas-section/latdas-2.jpg'
 import latdas3 from '../assets/latdas-section/latdas-3.jpg'
 import '../section.css'
 
+const SectionCarouselContent = (props) => {
+
+    return (
+        <>
+            <img
+                className="image"
+                src={props.imageSource}
+                alt="Slide Content"
+            />
+            <Carousel.Caption className='carousel-caption'>
+                <h3>{props.caption}</h3>
+            </Carousel.Caption>
+        </>
+    )
+}
+
 const LATDAS = () => {
   return (
     <div className='root root-latdas'>
@@ -21,38 +37,15 @@ const LATDAS = () => {
             <Col md="15" className='carousel-cont'>
                 <Carousel w-20vh h-20vh className='carousel-slide'>
                     <Carousel.Item className='carousel-item'>
-                        <img
-                        className="d-block w-50 h-40 image"
-                        src={latdas1}
-                        alt="First slide"
-                        />
-                        <Carousel.Caption className='carousel-caption'>
-                        <h3>Awal Latdas</h3>
-                        </Carousel.Caption>
+                        <SectionCarouselContent imageSource={latdas1} caption="Awal Latdas"/>
                     </Carousel.Item>
 
                     <Carousel.Item className='carousel-item'>
-                        <img
-                        className="d-block w-50 h-40 image"
-                        src={latdas2}
-                        alt="Second slide"
-                        />
-
-                        <Carousel.Caption className='carousel-caption'>
-                        <h3>Pertengahan Latdas</h3>
-                        </Carousel.Caption>
+                        <SectionCarouselContent imageSource={latdas2} caption="Pertengahan Latdas"/>
                     </Carousel.Item>
 
                     <Carousel.Item className='carousel-item'>
-                        <img
-                        className="d-block w-50 h-40 image"
-                        src={latdas3}
-                        alt="Third slide"
-                        />
-
-                        <Carousel.Caption className='carousel-caption'>
-                        <h3>Akhir Latdas</h3>
-                        </Carousel.Caption>
+                        <SectionCarouselContent imageSource={latdas3} caption="Akhir Latdas"/>
                     </Carousel.Item>
                 </Carousel>
             </Col>

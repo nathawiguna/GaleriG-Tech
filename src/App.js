@@ -1,4 +1,3 @@
-import './navbar.css';
 import Navbar from './components/navbar';
 import Intro from './components/Intro';
 import Latdas from './components/LATDAS';

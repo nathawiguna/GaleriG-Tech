@@ -5,6 +5,21 @@ import ephotech2 from '../assets/ephotech-section/ephotech_2.jpg'
 import ephotech3 from '../assets/ephotech-section/ephotech_3.jpg'
 import '../section.css'
 
+const SectionCarouselContent = (props) => {
+
+    return (
+        <>
+            <img
+                className="image"
+                src={props.imageSource}
+                alt="Slide Image"
+            />
+            <Carousel.Caption className='carousel-caption'>
+                <h3>{props.caption}</h3>
+            </Carousel.Caption>
+        </>
+    )
+}
 
 const EPHOTECH = () => {
   return (
@@ -22,39 +37,16 @@ const EPHOTECH = () => {
             <Col md="15" className='carousel-cont'>
                 <Carousel w-20vh h-20vh className='carousel-slide'>
                     <Carousel.Item className='carousel-item'>
-                        <img
-                        className="d-block w-50 h-40 image"
-                        src={ephotech1}
-                        alt="First slide"
-                        />
-                        <Carousel.Caption className='carousel-caption'>
-                        <h3>Awal EPHOTECH</h3>
-                        </Carousel.Caption>
+                        <SectionCarouselContent imageSource={ephotech1} caption="Awal EPHOTECH"/>
                     </Carousel.Item>
 
                     <Carousel.Item className='carousel-item'>
-                        <img
-                        className="d-block w-50 h-40 image"
-                        src={ephotech2}
-                        alt="Second slide"
-                        />
-
-                        <Carousel.Caption className='carousel-caption'>
-                        <h3>Pertengahan EPHOTECH</h3>
-                        </Carousel.Caption>
+                        <SectionCarouselContent imageSource={ephotech2} caption="Pertengahan EPHOTECH"/>
                     </Carousel.Item>
 
                     <Carousel.Item className='carousel-item'>
-                        <img
-                        className="d-block w-50 h-40 image"
-                        src={ephotech3}
-                        alt="Third slide"
-                        />
-
-                        <Carousel.Caption className='carousel-caption'>
-                        <h3>Akhir EPHOTECH</h3>
-                        </Carousel.Caption>
-                    </Carousel.Item>
+                        <SectionCarouselContent imageSource={ephotech3} caption="Akhir EPHOTECH"/>
+                    </Carousel.Item>  
                 </Carousel>
             </Col>
         </Container>

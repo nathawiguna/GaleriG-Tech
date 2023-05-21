@@ -47,6 +47,7 @@
 
 .image {
     margin-inline: auto;
+    width: 40vw;
 }
 
 .carousel-caption {
@@ -75,20 +76,32 @@
 }
 
 .carousel-control-prev {
-    margin-left: 10%;
+    margin-left: -6vw;
     height: fit-content;
     width: fit-content;
     margin-block: auto;
 }
 
 .carousel-control-next {
-    margin-right: 10%;
+    margin-right: -6vw;
     height: fit-content;
     width: fit-content;
     margin-block: auto;
 }
 
 @media only screen and (max-width: 532px) {
+    .image {
+        width: 70vw;
+    }
+
+    .carousel-control-prev {
+        margin-left: -9vw;
+    }
+    
+    .carousel-control-next {
+        margin-right: -9vw;
+    }
+
     .carousel-item {
         justify-content: center;
     }
